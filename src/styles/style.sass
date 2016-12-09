@@ -1,0 +1,68 @@
+$accent: #FF2F5A
+$subaccent: #27CCC0
+$heading: #565A69
+
+body
+  margin: 0
+  padding: 0
+  font-family: 'Open Sans', sans-serif
+
+.main_mnu
+  height: 100vh
+  width: 20%
+  background-color: #2B2F3E
+  color: #565A69
+  position: fixed
+  vertical-align: top
+  ul
+    padding: 0
+    li
+      list-style-type: none
+      color: #fff
+      padding: 27px
+    .active
+       background-color: $accent
+
+.sub_mnu
+  height: 100vh
+  width: 79%
+  float: right
+
+.card
+  background-color: #fff
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2)
+  display: inline-block
+  vertical-align: top
+  margin: 20px
+  padding: 10px
+  h1
+    color: $heading
+    margin: 10px 0 10px 5px
+
+.items_card
+  input
+    width: 290px
+    padding: 5pt
+    margin: 10px
+    border-radius: 3px
+    border: 1px solid #bababa
+  ul
+    padding: 0
+    li
+      list-style-type: none
+      padding: 10px
+      border-bottom: 1px solid #bababa
+    .active
+      border-left: 4px solid $accent
+    button
+      background: none
+      border: 1px solid $accent
+      color: $accent
+  button
+    padding: 6pt 5pt
+    width: 130px
+    color: #fff
+    background-color: $subaccent
+    border: none
+    border-radius: 3px
+    float: right

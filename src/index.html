@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="testApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello there!</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body ng-controller="testCrtl">
+    <div class="main_mnu">
+        <h1>Main</h1>
+        <ul>
+            <li class="active">Overview</li>
+        </ul>
+    </div>
+    <div class="sub_mnu">
+        <div class="card items_card">
+            <h1>Items</h1>
+            <input type="text" name="item_name" placeholder="Type name here..." ng-model="itemName">
+            <button ng-click="addItem()">Add new</button>
+            <ul>
+                <li ng-repeat="item in itemStorage | orderBy: reverse:true track by $index" ><a ng-click="selectItem($index)">{{item.itemName}}</a><button ng-click="deleteItem($index)">Delete</button></li>
+                <li class="active">First item custom name <span>3</span> <button>Delete</button></li>
+                <li>First item custom name <span>3</span> <button>Delete</button></li>
+            </ul>
+        </div>
+        <div class="card comments-card">
+            <h1>Comments #{{$index}}</h1>
+            <div class="comment" ng-repeat="comment in selectedComments">{{comment.com}}</div>
+            <textarea ng-model="commentary" ng-keydown="$event.keyCode === 13 && addCom()"></textarea>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/Controllers/testController.js"></script>
+
+</body>
+</html>
