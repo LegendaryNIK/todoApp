@@ -30,9 +30,10 @@ app.controller('testCrtl',function ($scope, $localStorage) {
     
     //add new item
     $scope.addItem = function() {
+        if($scope.itemName!=null){
         let newItem = new Item($scope.itemName);
         $scope.itemStorage.push(newItem);
-        $scope.itemName = null;
+        $scope.itemName = null;}
     };
     
     //delete item
@@ -65,7 +66,7 @@ app.controller('testCrtl',function ($scope, $localStorage) {
     
     //add new commentary
     $scope.addCom = function () {
-        if ($scope.commentary != ""){
+        if ($scope.commentary != null){
             let newComment = {com: $scope.commentary};
             $scope.commentary = null;
             $scope.selectedComments.push(newComment);

@@ -17,7 +17,7 @@
         <div class="card items-card">
             <h1>Items</h1>
             <input type="text" name="item_name" placeholder="Type name here..." ng-model="itemName" ng-keydown="$event.keyCode === 13 && addItem()">
-            <button ng-click="addItem()" ng-disabled="itemName===null">Add new</button>
+            <button ng-click="addItem()">Add new</button>
             <ul>
                 <li ng-repeat="item in itemStorage | limitTo:maxItems track by $index" ng-click="selectItem($index)" ng-class="{active: $index===indexOfItem}">
                     {{item.itemName}} <span>{{item.comments.length}}</span><button ng-click="deleteItem($index); $event.stopPropagation()">Delete</button>
@@ -30,7 +30,7 @@
             <div class="comment-item" ng-repeat="comment in selectedComments | limitTo: maxComments" ng-class="{'last': $last}"><div class="avatar" ng-class-odd="'odd'" ng-class-even="'even'"></div><div class="commentary">{{comment.com}}</div></div>
             <div class="expand" ng-if="selectedComments.length>maxComments" ng-click="expand('comments')">Show all comments</div>
             <div class="new-comment">
-                <div class="avatar" style="background-color: #E6E6E6"></div><textarea ng-model="commentary" ng-keydown="$event.keyCode === 13 && addCom()" rows="4"></textarea>
+                <div class="avatar" style="background-color: #E6E6E6" ng-click="addCom()"></div><textarea ng-model="commentary" ng-keydown="$event.keyCode === 13 && addCom()" rows="4"></textarea>
             </div>
         </div>
     </div>
