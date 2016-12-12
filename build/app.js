@@ -1,3 +1,5 @@
+var app = angular.module('testApp',['ngStorage'])
+
 app.controller('testCrtl',function ($scope, $localStorage) {
 
     $scope.itemStorage = [];

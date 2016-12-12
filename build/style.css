@@ -53,7 +53,10 @@ body {
       list-style-type: none;
       padding: 20px 15px;
       border-bottom: 1px solid #E6E6E6;
-      transition: all .1s ease-out; }
+      transition: all .1s ease-out;
+      cursor: pointer; }
+      .items-card ul li:hover {
+        background-color: #f9f9f9; }
     .items-card ul span {
       font-weight: 700;
       margin-left: 40px;
