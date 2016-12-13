@@ -30,7 +30,7 @@
             <div class="comment-item" ng-repeat="comment in selectedComments | limitTo: maxComments" ng-class="{'last': $last}"><div class="avatar" ng-class-odd="'odd'" ng-class-even="'even'"></div><div class="commentary">{{comment.com}}</div></div>
             <div class="expand" ng-if="selectedComments.length>maxComments" ng-click="expand('comments')">Show all comments</div>
             <div class="new-comment">
-                <div class="avatar" style="background-color: #E6E6E6" ng-click="addCom()"></div><textarea ng-model="commentary" ng-keydown="$event.keyCode === 13 && addCom()" rows="4"></textarea>
+                <div class="avatar" style="background-color: #E6E6E6" ng-click="addCom()"></div><textarea ng-model="commentary" ng-keydown="$event.keyCode === 13 && addCom();$event.preventDefault()" rows="4"></textarea>
             </div>
         </div>
     </div>
