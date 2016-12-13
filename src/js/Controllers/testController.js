@@ -60,9 +60,17 @@ app.controller('testCrtl',function ($scope, $localStorage) {
     //Marking selected item with 'active' flag
     $scope.selectItem = function (index) {
         $scope.selectedComments = $scope.itemStorage[index].comments;
+        reset(index);
         $scope.indexOfItem = index;
         $scope.isDisabled = false;
     };
+    //Scroll back to top and merge comment section when select another item
+    function reset(index) {
+        if (index!=$scope.indexOfItem) {
+            $scope.maxComments = 5;
+            window.scrollTo(0, 0);
+        }
+    }
     
     //add new commentary
     $scope.addCom = function () {
