@@ -81,5 +81,6 @@ app.controller('testCrtl',function ($scope, $localStorage) {
             $scope.commentary = null;
             $scope.selectedComments.push(newComment);
         }
+        event.preventDefault();
     }
 });
