@@ -10,6 +10,9 @@ body {
   color: #565A69;
   position: fixed;
   vertical-align: top; }
+  @media screen and (max-width: 568px) {
+    .side-mnu {
+      display: none; } }
   .side-mnu ul {
     padding: 0; }
     .side-mnu ul li {
@@ -23,11 +26,13 @@ body {
   height: 100vh;
   width: 79%;
   float: right; }
+  @media screen and (max-width: 568px) {
+    .mnu {
+      width: 100%; } }
 
 .card {
   background-color: #fff;
   box-shadow: 2px 1px 8px 2px rgba(0, 0, 0, 0.2);
-  display: inline-block;
   vertical-align: top;
   margin: 20px;
   padding: 15px; }
@@ -36,78 +41,80 @@ body {
     margin: 10px 0 10px 5px;
     font-weight: 300; }
 
-.items-card {
-  width: 480px; }
-  .items-card input {
-    width: 290px;
-    padding: 5pt;
-    margin: 10px;
-    border-radius: 3px;
-    border: 1px solid #bababa;
-    font-size: 12pt; }
-  .items-card ul {
-    padding: 0;
-    margin: 0;
-    font-weight: 600; }
-    .items-card ul li {
-      list-style-type: none;
-      padding: 20px 15px;
-      border-bottom: 1px solid #E6E6E6;
-      transition: all .1s ease-out;
-      cursor: pointer; }
-      .items-card ul li:hover {
-        background-color: #f9f9f9; }
-    .items-card ul span {
-      font-weight: 700;
-      margin-left: 40px;
-      background-color: #27CCC0;
-      color: #fff;
-      padding: 0 10px;
-      border-radius: 20px; }
-    .items-card ul .active {
-      border-left: 4px solid #FF2F5A; }
-    .items-card ul button {
-      background: none;
-      border: 2px solid #FF2F5A;
-      color: #FF2F5A;
-      width: 100px;
-      margin: -5px 0 0 0; }
-  .items-card button {
-    padding: 6pt 5pt;
-    margin: 9px 10px 0 0;
-    width: 130px;
-    color: #fff;
-    background-color: #27CCC0;
-    border: none;
-    border-radius: 3px;
-    float: right;
-    font-size: 12pt;
-    font-weight: 600;
-    cursor: pointer;
-    outline-style: none; }
+.items-card input {
+  width: 58%;
+  padding: 5pt;
+  margin: 10px 10px 10px 0;
+  border-radius: 3px;
+  border: 1px solid #bababa;
+  font-size: 12pt; }
 
-.comments-card {
-  width: 455px; }
-  .comments-card .comment-item {
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
-  .comments-card textarea {
-    width: 78%;
-    resize: none;
-    margin: 0 0 0 15px; }
-  .comments-card .commentary {
-    display: inline-block;
-    width: 75%;
-    font-size: 10pt;
-    vertical-align: top;
-    padding: 0 15px; }
-  .comments-card .avatar {
-    margin-top: 5px;
-    width: 70px;
-    height: 70px;
-    display: inline-block; }
-  .comments-card .last {
-    border-bottom: none; }
+.items-card ul {
+  padding: 0;
+  margin: 0;
+  font-weight: 600; }
+  .items-card ul li {
+    list-style-type: none;
+    padding: 20px 15px;
+    border-bottom: 1px solid #E6E6E6;
+    transition: all .1s ease-out;
+    cursor: pointer; }
+    .items-card ul li:hover {
+      background-color: #f9f9f9; }
+  .items-card ul span {
+    font-weight: 700;
+    margin-left: 40px;
+    background-color: #27CCC0;
+    color: #fff;
+    padding: 0 10px;
+    border-radius: 20px; }
+  .items-card ul .active {
+    border-left: 4px solid #FF2F5A; }
+  .items-card ul button {
+    background: none;
+    border: 2px solid #FF2F5A;
+    color: #FF2F5A;
+    width: 100px;
+    margin: -5px 0 0 0; }
+
+.items-card button {
+  padding: 6pt 5pt;
+  margin: 9px 10px 0 0;
+  width: 30%;
+  color: #fff;
+  background-color: #27CCC0;
+  border: none;
+  border-radius: 3px;
+  float: right;
+  font-size: 12pt;
+  font-weight: 600;
+  cursor: pointer;
+  outline-style: none; }
+
+.comments-card .comment-item {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+
+.comments-card textarea {
+  width: 70%;
+  resize: none;
+  margin: 0 0 0 15px; }
+
+.comments-card .commentary {
+  display: inline-block;
+  width: 75%;
+  font-size: 10pt;
+  vertical-align: top;
+  padding: 0 15px; }
+
+.comments-card .avatar {
+  margin-top: 5px;
+  width: 70px;
+  height: 70px;
+  display: inline-block; }
+
+.comments-card .last {
+  border-bottom: none; }
 
 .expand {
   width: 100%;

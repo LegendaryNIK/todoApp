@@ -2,9 +2,12 @@
 <html ng-app="testApp">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello there!</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/grids-responsive-min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+
 </head>
 <body ng-controller="testCrtl" ng-init="start()">
     <div class="side-mnu">
@@ -14,7 +17,7 @@
         </ul>
     </div>
     <div class="mnu">
-        <div class="card items-card">
+        <div class="card items-card pure-u-xl-10-24 pure-u-lg-2-5 pure-u-md-22-24 pure-u-sm-22-24">
             <h1>Items</h1>
             <input type="text" name="item_name" placeholder="Type name here..." ng-model="itemName" ng-keydown="$event.keyCode === 13 && addItem()">
             <button ng-click="addItem()">Add new</button>
@@ -25,7 +28,7 @@
             </ul>
             <div class="expand" ng-if="itemStorage.length>maxItems" ng-click="expand('items')">Show all items</div>
         </div>
-        <div class="card comments-card" ng-class="{disabled: isDisabled===true}">
+        <div class="card comments-card pure-u-xl-10-24 pure-u-lg-2-5 pure-u-md-22-24 pure-u-sm-22-24" ng-class="{disabled: isDisabled===true}">
             <h1>Comments #{{indexOfItem+1}}</h1>
             <div class="comment-item" ng-repeat="comment in selectedComments | limitTo: maxComments" ng-class="{'last': $last}"><div class="avatar" ng-class-odd="'odd'" ng-class-even="'even'"></div><div class="commentary">{{comment.com}}</div></div>
             <div class="expand" ng-if="selectedComments.length>maxComments" ng-click="expand('comments')">Show all comments</div>
