@@ -10,15 +10,15 @@ body {
   color: #565A69;
   position: fixed;
   vertical-align: top; }
-  @media screen and (max-width: 568px) {
-    .side-mnu {
-      display: none; } }
+  .side-mnu h1 {
+    margin: 20px;
+    font-weight: 400; }
   .side-mnu ul {
     padding: 0; }
     .side-mnu ul li {
       list-style-type: none;
       color: #fff;
-      padding: 27px; }
+      padding: 20px; }
     .side-mnu ul .active {
       background-color: #FF2F5A; }
 
@@ -131,3 +131,16 @@ body {
 
 .disabled {
   display: none; }
+
+@media screen and (max-width: 568px) {
+  .side-mnu {
+    height: 60px;
+    width: 100%; }
+    .side-mnu h1 {
+      margin: 10px; }
+    .side-mnu ul {
+      margin: -4px; }
+      .side-mnu ul li {
+        padding: 10px 15px; }
+  .mnu {
+    padding-top: 90px; } }

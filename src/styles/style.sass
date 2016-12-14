@@ -15,14 +15,15 @@ body
   color: #565A69
   position: fixed
   vertical-align: top
-  @media screen and (max-width: 568px)
-    display: none
+  h1
+    margin: 20px
+    font-weight: 400
   ul
     padding: 0
     li
       list-style-type: none
       color: #fff
-      padding: 27px
+      padding: 20px
     .active
        background-color: $accent
 
@@ -47,7 +48,6 @@ body
     font-weight: 300
 
 .items-card
-  //width: 480px
   input
     width: 58%
     padding: 5pt
@@ -99,7 +99,6 @@ body
     outline-style: none
 
 .comments-card
-  //width: 455px
   .comment-item
     padding: 15px 0
     border-bottom: 1px solid rgba(0,0,0,0.2)
@@ -135,4 +134,17 @@ body
 .disabled
   display: none
 
+
+@media screen and (max-width: 568px)
+  .side-mnu
+    height: 60px
+    width: 100%
+    h1
+      margin: 10px
+    ul
+      margin: -4px
+      li
+        padding: 10px 15px
+  .mnu
+    padding-top: 90px
 
