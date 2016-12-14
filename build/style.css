@@ -143,4 +143,8 @@ body {
       .side-mnu ul li {
         padding: 10px 15px; }
   .mnu {
-    padding-top: 100px; } }
+    padding-top: 100px; }
+  .items-card {
+    margin: 10px; }
+    .items-card button {
+      margin-right: 5px; } }
