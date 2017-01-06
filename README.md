@@ -5,4 +5,4 @@
 3. run gulp
 4. head to localhost:1337
 
-Or just head to https://legendarynik.github.io/todoAppTest/ :)
+Or just head to https://legendarynik.github.io/todoApp/ :)
